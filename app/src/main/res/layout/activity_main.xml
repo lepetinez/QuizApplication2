@@ -8,7 +8,7 @@
     android:background="@color/blue01"
     android:paddingStart="40dp"
     android:paddingEnd="40dp"
-    tools:context=".MainActivity">
+    tools:context=".splash.view.SplashScreenActivity">
 
     <android.support.constraint.Guideline
         android:id="@+id/welcomeImageTopGuideline"
@@ -52,6 +52,7 @@
         android:layout_marginBottom="40dp"
         android:background="@color/blue01"
         android:fontFamily="@font/baloo"
+        android:stateListAnimator="@null"
         android:text="START GAME"
         android:textColor="@color/black01"
         android:textSize="36sp"
