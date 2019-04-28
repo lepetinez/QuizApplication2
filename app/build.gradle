@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: 'kotlin-kapt'
+
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -29,5 +31,9 @@ dependencies {
     implementation appDependencies.constraintLayout
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     implementation appDependencies.junit
+    kapt appDependencies.dagger2Default
+    kapt appDependencies.dagger2Proccessor
+    implementation appDependencies.dagger2
+    implementation appDependencies.dagger2Support
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
