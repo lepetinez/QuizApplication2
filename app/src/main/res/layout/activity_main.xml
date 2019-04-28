@@ -8,7 +8,7 @@
     android:background="@color/blue01"
     android:paddingStart="40dp"
     android:paddingEnd="40dp"
-    tools:context=".main.view.MainActivity">
+    tools:context=".splash.view.SplashScreenActivity">
 
     <android.support.constraint.Guideline
         android:id="@+id/welcomeImageTopGuideline"
