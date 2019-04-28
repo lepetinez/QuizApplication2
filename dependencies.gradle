@@ -15,14 +15,25 @@ ext {
     androidKtxVersion = '1.0.0'
     junitVersion = '4.12'
     googlePlayServicesVesrion = '16.0.0'
-
+    rxKotlinVersion = '2.2.0'
+    rxAndroidVersion = '2.1.0'
 
     appDependencies = [
-            junit: "junit:junit:${junitVersion}",
-            constraintLayout: "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
-            dagger2Default: "com.google.dagger:dagger-compiler:${daggerVersion}",
-            dagger2: "com.google.dagger:dagger-android:${daggerVersion}",
-            dagger2Support: "com.google.dagger:dagger-android-support:${daggerVersion}",
+            junit            : "junit:junit:${junitVersion}",
+            constraintLayout : "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
+            dagger2Default   : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger2          : "com.google.dagger:dagger-android:${daggerVersion}",
+            dagger2Support   : "com.google.dagger:dagger-android-support:${daggerVersion}",
             dagger2Proccessor: "com.google.dagger:dagger-android-processor:${daggerVersion}",
+            rxKotlin         : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxAndroid        : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}"
+    ]
+
+    dataDependencies = [
+            rxKotlin: "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+    ]
+
+    domainDependencies = [
+            rxKotlin: "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
     ]
 }

@@ -36,4 +36,6 @@ dependencies {
     implementation appDependencies.dagger2
     implementation appDependencies.dagger2Support
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation appDependencies.rxKotlin
+    implementation appDependencies.rxAndroid
 }
