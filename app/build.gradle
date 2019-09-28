@@ -34,4 +34,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation appDependencies.rxKotlin
     implementation appDependencies.rxAndroid
+    implementation appDependencies.koinCore
+    implementation appDependencies.koinAndroid
+    implementation appDependencies.koinAndroidScope
+    implementation appDependencies.koinAndroidViewModel
+    implementation appDependencies.koinAndroidExt
+
 }
