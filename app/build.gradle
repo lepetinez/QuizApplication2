@@ -22,23 +22,26 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation appDependencies.kotlin
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation appDependencies.constraintLayout
+    implementation 'androidx.core:core-ktx:1.1.0'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     implementation appDependencies.junit
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation appDependencies.rxKotlin
     implementation appDependencies.rxAndroid
-    implementation appDependencies.koinCore
-    implementation appDependencies.koinAndroid
-    implementation appDependencies.koinAndroidScope
-    implementation appDependencies.koinAndroidViewModel
-    implementation appDependencies.koinAndroidExt
+    implementation appDependencies.dagger
+    implementation appDependencies.daggerAndroid
+    kapt appDependencies.daggerCompiler
+    kapt appDependencies.daggerAndroidProcessor
     implementation appDependencies.navigationAndroidFragment
     implementation appDependencies.navigationAndroidUi
 }

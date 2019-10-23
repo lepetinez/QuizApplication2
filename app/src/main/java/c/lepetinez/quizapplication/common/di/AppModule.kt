@@ -1,11 +1,21 @@
 package c.lepetinez.quizapplication.common.di
 
+import android.app.Application
+import android.content.Context
 import c.lepetinez.quizapplication.common.rx.RxSchedulers
-import org.koin.dsl.module
+import dagger.Module
+import dagger.Provides
+import javax.inject.Singleton
 
-object AppModule {
+@Module
+class AppModule {
 
-    fun getModule() = module {
-        single { RxSchedulers() }
-    }
+    @Singleton
+    @Provides
+    fun provideContext(application: Application): Context = application
+
+
+    @Singleton
+    @Provides
+    fun provideSchedulers(): RxSchedulers = RxSchedulers()
 }

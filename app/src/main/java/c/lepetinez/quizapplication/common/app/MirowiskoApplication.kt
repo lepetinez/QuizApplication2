@@ -1,13 +1,30 @@
 package c.lepetinez.quizapplication.common.app
 
+import android.app.Activity
 import android.app.Application
-import c.lepetinez.quizapplication.common.di.AppModule
-import org.koin.core.context.startKoin
+import c.lepetinez.quizapplication.common.di.DaggerAppComponent
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasActivityInjector
+import javax.inject.Inject
 
-class MirowiskoApplication : Application() {
+class MirowiskoApplication : Application(), HasActivityInjector {
+
+    @Inject
+    lateinit var activityInjector: DispatchingAndroidInjector<Activity>
 
     override fun onCreate() {
         super.onCreate()
-        startKoin { modules(listOf(AppModule.getModule())) }
+
+        daggerInit()
+    }
+
+    override fun activityInjector(): AndroidInjector<Activity> = activityInjector
+
+    private fun daggerInit() {
+        DaggerAppComponent.builder()
+                .application(this)
+                .build()
+                .inject(this)
     }
 }
