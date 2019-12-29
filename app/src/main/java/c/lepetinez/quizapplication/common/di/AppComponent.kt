@@ -25,5 +25,5 @@ interface AppComponent : AndroidInjector<DaggerApplication> {
         fun build(): AppComponent
     }
 
-    fun inject(koboldApplication: MirowiskoApplication)
+    fun inject(mirowiskoApplication: MirowiskoApplication)
 }
