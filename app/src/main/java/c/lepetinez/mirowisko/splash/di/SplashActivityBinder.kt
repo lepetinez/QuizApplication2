@@ -1,5 +1,6 @@
 package c.lepetinez.mirowisko.splash.di
 
+import c.lepetinez.mirowisko.common.di.scopes.PerActivity
 import c.lepetinez.mirowisko.splash.view.SplashScreenActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

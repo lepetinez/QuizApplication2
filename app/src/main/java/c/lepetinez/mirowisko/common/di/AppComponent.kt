@@ -2,6 +2,7 @@ package c.lepetinez.mirowisko.common.di
 
 import android.app.Application
 import c.lepetinez.mirowisko.common.app.MirowiskoApplication
+import c.lepetinez.mirowisko.splash.di.SplashActivityBinder
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -12,6 +13,7 @@ import javax.inject.Singleton
 @Singleton
 @Component(
         modules = [AndroidSupportInjectionModule::class,
+            SplashActivityBinder::class,
             AppModule::class
         ]
 )

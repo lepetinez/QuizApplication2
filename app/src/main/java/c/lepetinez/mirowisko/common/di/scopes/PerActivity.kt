@@ -1,4 +1,4 @@
-package c.lepetinez.mirowisko.splash.di
+package c.lepetinez.mirowisko.common.di.scopes
 
 import javax.inject.Scope
 
