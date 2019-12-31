@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "c.lepetinez.domain"
+        applicationId "c.lepetinez.mirowisko.domain"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
