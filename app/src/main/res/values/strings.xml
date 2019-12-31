@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">QuizApplication</string>
-    <string name="AppName">PyTanio!</string>
+    <string name="app_name">Mirowisko</string>
+    <string name="splash_screen_title">MIRowisko</string>
 </resources>
