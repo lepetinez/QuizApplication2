@@ -14,8 +14,8 @@ private const val SPLASH_SCREEN_DELAY_SECONDS = 2L
 
 // TODO: tests will be added
 class SplashScreenViewModel(
-        private val splashScreenNavigator: SplashScreenNavigator,
-        private val rxSchedulers: RxSchedulers
+    private val splashScreenNavigator: SplashScreenNavigator,
+    private val rxSchedulers: RxSchedulers
 ) : LifecycleViewModel() {
 
     private val disposables = CompositeDisposable()
@@ -33,10 +33,12 @@ class SplashScreenViewModel(
     private fun navigateToMainActivity() {
         // TODO: temporary solution, timer will be replaced by a logged-in check.
         disposables += Single.timer(SPLASH_SCREEN_DELAY_SECONDS, TimeUnit.SECONDS)
-                .subscribeOn(rxSchedulers.io())
-                .observeOn(rxSchedulers.mainThread())
-                .subscribeBy(onSuccess = {
+            .subscribeOn(rxSchedulers.io())
+            .observeOn(rxSchedulers.mainThread())
+            .subscribeBy(
+                onSuccess = {
                     splashScreenNavigator.call(ShowMainActivityScreen)
-                })
+                }
+            )
     }
 }

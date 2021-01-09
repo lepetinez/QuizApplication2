@@ -15,19 +15,19 @@ class SplashActivityModule {
     @Provides
     @PerActivity
     fun provideSplashNavigator(activity: SplashScreenActivity): SplashScreenNavigator =
-            SplashScreenNavigator(activity)
+        SplashScreenNavigator(activity)
 
     @Provides
     @PerActivity
     fun provideSplashScreenViewModel(
-            activity: SplashScreenActivity,
-            navigator: SplashScreenNavigator,
-            schedulers: RxSchedulers
+        activity: SplashScreenActivity,
+        navigator: SplashScreenNavigator,
+        schedulers: RxSchedulers
     ): SplashScreenViewModel =
-            activity.getViewModel(
-                    SplashScreenViewModel(
-                            navigator,
-                            schedulers
-                    )
+        activity.getViewModel(
+            SplashScreenViewModel(
+                navigator,
+                schedulers
             )
+        )
 }

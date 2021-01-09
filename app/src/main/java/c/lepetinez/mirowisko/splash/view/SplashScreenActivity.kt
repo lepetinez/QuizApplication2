@@ -1,9 +1,8 @@
 package c.lepetinez.mirowisko.splash.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LifecycleObserver
 import c.lepetinez.mirowisko.R
 import c.lepetinez.mirowisko.splash.viewmodel.SplashScreenViewModel
 import dagger.android.AndroidInjection
