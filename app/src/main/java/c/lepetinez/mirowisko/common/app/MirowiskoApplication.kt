@@ -23,8 +23,8 @@ class MirowiskoApplication : Application(), HasActivityInjector {
 
     private fun daggerInit() {
         DaggerAppComponent.builder()
-                .application(this)
-                .build()
-                .inject(this)
+            .application(this)
+            .build()
+            .inject(this)
     }
 }

@@ -14,7 +14,6 @@ class AppModule {
     @Provides
     fun provideContext(application: Application): Context = application
 
-
     @Singleton
     @Provides
     fun provideSchedulers(): RxSchedulers = RxSchedulers()

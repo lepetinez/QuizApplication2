@@ -8,7 +8,7 @@ import c.lepetinez.mirowisko.main.view.MainActivity
 
 class SplashScreenNavigator(private val activity: Activity) : Navigator<SplashScreenNavigation>() {
 
-    init{
+    init {
         get()
     }
 
